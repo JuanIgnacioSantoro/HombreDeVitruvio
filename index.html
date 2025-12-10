@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hombre de Vitruvio</title>
+</head>
+<style>
+    body {
+        text-align: center;
+        color: white;
+        background-color: black;
+    }
+    img {
+        height: 500px;
+    }
+</style>
+<body>
+    <h1>Hombre de Vitruvio</h1>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Vitruvian_Man_by_Leonardo_da_Vinci.jpg/800px-Vitruvian_Man_by_Leonardo_da_Vinci.jpg" alt="Hombre de Vitruvio de Leonardo Da Vinci">
+    <h2>Programado por Juan Santoro</h2>
+    <button onclick="Calcular()">Calcular</button>
+    <p id="Texto"></p>
+</body>
+<script>
+    function Calcular() {
+        let Palma = prompt("Introducir largo de una palma (Desde la muñeca hasta el extremo del dedo medio)", "Valor en centímetros (Ejemplo: 17.5)");
+        Rostro = Palma;
+        Altura = Palma*10;
+        Cabeza = Altura/8;
+        RaicesDelPeloAEsteron = Altura/6;
+        PechoACoronilla = Altura/4;
+        MentonANariz = Rostro/3;
+        Frente = Rostro/3;
+        Pie = Altura/6;
+        Codo = Altura/4;
+        Pecho = Altura/4;
+
+        //MemesPalma = Palma/2;
+        //let Texto1 = document.createElement('p');
+        //Texto1.textContent = "Memes palma equivale a " + MemesPalma + " cm.";
+        //document.body.appendChild(Texto1);
+        
+        Texto1 = "Tu palma de la mano, desde la muñeca hasta el extremo del dedo medio mide " + Palma + " cm.";
+        Texto2 = "El rostro, desde la barbilla hasta la parte más alta de la frente, donde están las raíces del pelo, mide " + Rostro + " cm."; 
+        Texto3 = "Tu altura es de " + Number(Altura.toFixed(2)) + " cm o " + Altura/100 + " m.";
+        Texto4 = "La cabeza, desde la barbilla hasta su coronilla, mide " + Number(Cabeza.toFixed(2)) + " cm.";
+        Texto5 = "Desde el esternón hasta las raíces del pelo hay " + Number(RaicesDelPeloAEsteron.toFixed(2)) + " cm.";
+        Texto6 = "Desde la parte memes del pecho hasta la coronilla hay " + Number(PechoACoronilla.toFixed(2)) + " cm.";
+        Texto7 = "Del mentón hasta la base de la nariz hay " + Number(MentonANariz.toFixed(2)) + " cm.";
+        Texto8 = "La frente mide " + Number(Frente.toFixed(2)) + " cm.";
+        Texto9 = "El codo mide " + Number(Codo.toFixed(2)) + " cm.";
+        Texto10 = "El pecho mide " + Number(Pecho.toFixed(2)) + " cm.";
+
+        document.getElementById("Texto").innerHTML = Texto1 + "<br>" + Texto2 + "<br>" + Texto3 + "<br>" + Texto4 + "<br>" + Texto5 + "<br>" + Texto6 + "<br>" + Texto7 + "<br>" + Texto8 + "<br>" + Texto9;
+    }
+</script>
+</html>
